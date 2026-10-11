@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrandStay Hotel | Hotel Management</title>
+    <meta
+      name="description"
+      content="GrandStay Hotel management website for college project featuring rooms, booking, services, and contact information."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">G</div>
+          <div>
+            <p class="brand-name">GrandStay</p>
+            <span class="brand-tag">Hotel Management</span>
+          </div>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#rooms">Rooms</a>
+          <a href="#booking">Booking</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="#booking" class="btn btn-primary">Book Now</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Welcome to GrandStay</span>
+            <h1>Comfort, elegance, and memorable stays.</h1>
+            <p>
+              GrandStay offers premium rooms, personalized hospitality, and a
+              seamless hotel management experience designed for modern guests and
+              staff.
+            </p>
+            <div class="hero-actions">
+              <a href="#booking" class="btn btn-primary">Reserve a Room</a>
+              <a href="#rooms" class="btn btn-secondary">Explore Rooms</a>
+            </div>
+            <ul class="hero-highlights">
+              <li>24/7 Front Desk</li>
+              <li>Free Wi-Fi</li>
+              <li>Luxury Dining</li>
+            </ul>
+          </div>
+
+          <div class="hero-panel">
+            <div class="booking-mini-card">
+              <p class="mini-label">Special Offer</p>
+              <h3>Weekend Escape</h3>
+              <div class="mini-price-row">
+                <span class="price">₹4,999</span>
+                <span class="per-night">/night</span>
+              </div>
+              <ul>
+                <li>Breakfast Included</li>
+                <li>Free Cancellation</li>
+                <li>City View Suite</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="container stats-grid">
+          <div class="stat-box">
+            <strong>120+</strong>
+            <span>Rooms Available</span>
+          </div>
+          <div class="stat-box">
+            <strong>96%</strong>
+            <span>Guest Satisfaction</span>
+          </div>
+          <div class="stat-box">
+            <strong>18</strong>
+            <span>Years of Service</span>
+          </div>
+          <div class="stat-box">
+            <strong>₹8.5L</strong>
+            <span>Monthly Revenue</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="rooms" id="rooms">
+        <div class="container section-heading">
+          <span class="eyebrow">Stay Options</span>
+          <h2>Choose your perfect room</h2>
+        </div>
+
+        <div class="container room-grid">
+          <article class="room-card">
+            <div class="room-image room-one"></div>
+            <div class="room-content">
+              <div class="room-topline">
+                <h3>Deluxe Room</h3>
+                <span>₹3,200/night</span>
+              </div>
+              <p>Comfortable room with king bed, balcony, and modern amenities.</p>
+              <ul>
+                <li>2 Guests</li>
+                <li>Breakfast</li>
+                <li>Fast Wi-Fi</li>
+              </ul>
+              <button class="btn btn-primary room-select" type="button">Book</button>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <div class="room-image room-two"></div>
+            <div class="room-content">
+              <div class="room-topline">
+                <h3>Executive Suite</h3>
+                <span>₹5,400/night</span>
+              </div>
+              <p>Spacious suite with lounge area, work desk, and premium decor.</p>
+              <ul>
+                <li>3 Guests</li>
+                <li>City View</li>
+                <li>Mini Bar</li>
+              </ul>
+              <button class="btn btn-primary room-select" type="button">Book</button>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <div class="room-image room-three"></div>
+            <div class="room-content">
+              <div class="room-topline">
+                <h3>Family Villa</h3>
+                <span>₹7,800/night</span>
+              </div>
+              <p>Ideal for families with living room, kitchenette, and private patio.</p>
+              <ul>
+                <li>4 Guests</li>
+                <li>2 Bedrooms</li>
+                <li>Private Dining</li>
+              </ul>
+              <button class="btn btn-primary room-select" type="button">Book</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="booking" id="booking">
+        <div class="container booking-grid">
+          <div class="booking-intro">
+            <span class="eyebrow">Reservation</span>
+            <h2>Reserve your stay</h2>
+            <p>
+              Manage guest reservations, room preferences, and arrival details in one
+              streamlined booking process.
+            </p>
+            <div class="booking-notes">
+              <div>
+                <strong>Easy Check-in</strong>
+                <span>Fast arrival and digital registration</span>
+              </div>
+              <div>
+                <strong>Flexible Plans</strong>
+                <span>Custom packages for business and leisure</span>
+              </div>
+            </div>
+          </div>
+
+          <form id="bookingForm" class="booking-form">
+            <div class="form-row">
+              <label>
+                Guest Name
+                <input type="text" id="guestName" placeholder="Enter full name" required />
+              </label>
+              <label>
+                Phone
+                <input type="tel" id="guestPhone" placeholder="Your contact number" required />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Check-in
+                <input type="date" id="checkIn" required />
+              </label>
+              <label>
+                Check-out
+                <input type="date" id="checkOut" required />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Room Type
+                <select id="roomType" required>
+                  <option value="">Select Room</option>
+                  <option value="Deluxe Room">Deluxe Room</option>
+                  <option value="Executive Suite">Executive Suite</option>
+                  <option value="Family Villa">Family Villa</option>
+                </select>
+              </label>
+              <label>
+                Guests
+                <select id="guestCount" required>
+                  <option value="">Choose</option>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                </select>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="dashboard" aria-label="Hotel operation dashboard">
+        <div class="container section-heading">
+          <span class="eyebrow">Operations</span>
+          <h2>Hotel dashboard overview</h2>
+        </div>
+        <div class="container dashboard-grid">
+          <div class="dashboard-card">
+            <p>Occupied Rooms</p>
+            <h3>84</h3>
+            <span>+8% from last week</span>
+          </div>
+          <div class="dashboard-card">
+            <p>Available Rooms</p>
+            <h3>36</h3>
+            <span>10 deluxe and 26 standard</span>
+          </div>
+          <div class="dashboard-card">
+            <p>Total Guests</p>
+            <h3>142</h3>
+            <span>Across 18 departments</span>
+          </div>
+          <div class="dashboard-card">
+            <p>Revenue</p>
+            <h3>₹2.4L</h3>
+            <span>This month so far</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="container section-heading">
+          <span class="eyebrow">Services</span>
+          <h2>Everything guests need</h2>
+        </div>
+
+        <div class="container service-grid">
+          <div class="service-card">
+            <div class="service-icon">✦</div>
+            <h3>Luxury Dining</h3>
+            <p>Chef-crafted breakfast, lunch, dinner, and private dining experiences.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">☼</div>
+            <h3>Pool & Spa</h3>
+            <p>Relax at the rooftop pool and rejuvenating spa with wellness packages.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Business Center</h3>
+            <p>Conference-ready spaces with internet access, printing, and work desks.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">✓</div>
+            <h3>Housekeeping</h3>
+            <p>Daily cleaning, fresh linens, room assistance, and premium guest care.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bookings-list">
+        <div class="container section-heading">
+          <span class="eyebrow">Recent Bookings</span>
+          <h2>Latest reservation list</h2>
+        </div>
+        <div class="container table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Guest</th>
+                <th>Room</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="bookingTableBody">
+              <tr>
+                <td>Riya Sharma</td>
+                <td>Deluxe Room</td>
+                <td>12 Aug</td>
+                <td>15 Aug</td>
+                <td><span class="status confirmed">Confirmed</span></td>
+              </tr>
+              <tr>
+                <td>Arjun Mehta</td>
+                <td>Executive Suite</td>
+                <td>15 Aug</td>
+                <td>18 Aug</td>
+                <td><span class="status pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>Neha Patel</td>
+                <td>Family Villa</td>
+                <td>20 Aug</td>
+                <td>24 Aug</td>
+                <td><span class="status confirmed">Confirmed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <span class="eyebrow">Reach Us</span>
+            <h2>We’re here to help</h2>
+            <p>
+              Connect with our hospitality team for room bookings, special requests,
+              corporate stays, and event arrangements.
+            </p>
+            <ul>
+              <li>📍 24 Golden Avenue, City Center</li>
+              <li>📞 +91 98765 43210</li>
+              <li>✉️ hello@grandstayhotel.com</li>
+            </ul>
+          </div>
+
+          <form class="contact-form">
+            <label>
+              Name
+              <input type="text" placeholder="Your name" />
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="Your email" />
+            </label>
+            <label>
+              Message
+              <textarea rows="4" placeholder="Write your message"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 GrandStay Hotel Management</p>
+        <p>Designed for college project</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
