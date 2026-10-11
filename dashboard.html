@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | GrandStay Hotel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">G</div>
+          <div>
+            <p class="brand-name">GrandStay</p>
+            <span class="brand-tag">Hotel Management</span>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#rooms">Rooms</a>
+          <a href="bookings.html">Bookings</a>
+          <a href="index.html#food">Food</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <span class="user-chip" id="userDisplayName">Welcome</span>
+          <button class="btn btn-secondary" id="signOutButton" type="button">Sign out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container dashboard-layout">
+      <div class="dashboard-header">
+        <div>
+          <span class="eyebrow">Operations</span>
+          <h2 style="margin: 10px 0 0; font-family: 'Playfair Display', serif; color: var(--primary-dark);">Dashboard Overview</h2>
+        </div>
+        <div class="user-chip" id="dashboardGreeting">Hello</div>
+      </div>
+
+      <section class="summary-grid">
+        <div class="summary-card">
+          <p>Booked Rooms</p>
+          <strong>86</strong>
+        </div>
+        <div class="summary-card">
+          <p>Guests Today</p>
+          <strong>142</strong>
+        </div>
+        <div class="summary-card">
+          <p>Food Orders</p>
+          <strong>38</strong>
+        </div>
+        <div class="summary-card">
+          <p>Revenue</p>
+          <strong>₹2.4L</strong>
+        </div>
+      </section>
+
+      <section class="dashboard-panels">
+        <div class="panel">
+          <h3>Recent Activity</h3>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div>
+                <strong>Riya Sharma</strong>
+                <span>Deluxe Room confirmation</span>
+              </div>
+              <span>10:42 AM</span>
+            </div>
+            <div class="activity-item">
+              <div>
+                <strong>Royal Thali</strong>
+                <span>Breakfast order completed</span>
+              </div>
+              <span>9:30 AM</span>
+            </div>
+            <div class="activity-item">
+              <div>
+                <strong>Arjun Mehta</strong>
+                <span>Check-in updated</span>
+              </div>
+              <span>Yesterday</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Quick Actions</h3>
+          <div class="quick-actions">
+            <a href="bookings.html" class="btn btn-primary">Manage Bookings</a>
+            <a href="index.html#food" class="btn btn-secondary">Review Food Menu</a>
+            <a href="index.html" class="btn btn-secondary">View Website</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

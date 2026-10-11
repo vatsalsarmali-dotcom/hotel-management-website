@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookings | GrandStay Hotel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">G</div>
+          <div>
+            <p class="brand-name">GrandStay</p>
+            <span class="brand-tag">Hotel Management</span>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="index.html#rooms">Rooms</a>
+          <a href="index.html#food">Food</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <span class="user-chip" id="userDisplayName">Welcome</span>
+          <button class="btn btn-secondary" id="signOutButton" type="button">Sign out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container dashboard-layout">
+      <div class="page-header">
+        <span class="eyebrow">Reservation Management</span>
+        <h2 style="margin: 10px 0 18px; font-family: 'Playfair Display', serif; color: var(--primary-dark);">Bookings and Guest Desk</h2>
+      </div>
+
+      <section class="booking-grid" style="margin-bottom: 28px;">
+        <div class="booking-intro">
+          <h3 style="margin: 0 0 12px; color: var(--primary-dark);">New Booking</h3>
+          <p>Add a guest reservation to the live list.</p>
+          <div class="booking-notes">
+            <div>
+              <strong>Front desk</strong>
+              <span>Fast reservation entry and guest confirmation</span>
+            </div>
+            <div>
+              <strong>Room status</strong>
+              <span>Live updates for check-in and checkout schedule</span>
+            </div>
+          </div>
+        </div>
+
+        <form id="bookingForm" class="booking-form">
+          <div class="form-row">
+            <label>
+              Guest Name
+              <input type="text" id="guestName" placeholder="Enter guest name" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" id="guestPhone" placeholder="Contact number" required />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Check-in
+              <input type="date" id="checkIn" required />
+            </label>
+            <label>
+              Check-out
+              <input type="date" id="checkOut" required />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Room Type
+              <select id="roomType" required>
+                <option value="">Select room</option>
+                <option value="Deluxe Room">Deluxe Room</option>
+                <option value="Executive Suite">Executive Suite</option>
+                <option value="Family Villa">Family Villa</option>
+              </select>
+            </label>
+            <label>
+              Guests
+              <select id="guestCount" required>
+                <option value="">Choose</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+              </select>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Confirm Reservation</button>
+        </form>
+      </section>
+
+      <section>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Guest</th>
+                <th>Room</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="bookingTableBody">
+              <tr>
+                <td>Riya Sharma</td>
+                <td>Deluxe Room</td>
+                <td>12 Aug</td>
+                <td>15 Aug</td>
+                <td><span class="status confirmed">Confirmed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
